@@ -1,38 +1,150 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1f2d 0%, #0f1320 100%);
+  border-bottom: 1px solid #2a3040;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #64b5f6;
+  text-shadow: 0 0 10px rgba(100, 181, 246, 0.5);
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+}
+
+.phenomena-container {
+  flex: 1;
+  padding: 2rem;
+}
+
+.phenomena-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.phenomenon {
+  background: linear-gradient(145deg, #1a2035, #15192b);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #2a3040;
+}
+
+.phenomenon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.phenomenon.prime {
+  border: 2px solid #ffeb3b;
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.3);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    box-shadow: 0 0 30px rgba(255, 235, 59, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 235, 59, 0.3);
+  }
+}
+
+.phenomenon-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.phenomenon-emoji {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.phenomenon-name {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+.status {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #1e2538;
+}
+
+.status-visible {
+  color: #4caf50;
+}
+
+.status-faint {
+  color: #9e9e9e;
+}
+
+.status-prime-for-study {
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+.prime-alert {
+  background-color: rgba(255, 235, 59, 0.1);
+  border: 1px solid rgba(255, 235, 59, 0.3);
+  border-radius: 8px;
+  padding: 0.8rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.prime-alert p {
+  color: #ffeb3b;
+  font-weight: bold;
+  margin: 0;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0d101c;
+  border-top: 1px solid #2a3040;
+  color: #777;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  
+  .phenomena-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .phenomenon-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .phenomenon-emoji {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 }
