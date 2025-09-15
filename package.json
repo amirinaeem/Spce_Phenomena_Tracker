@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "description": "Track and study space phenomena",
   "main": "src/index.js",
+  "homepage": "https://amirinaeem.github.io/Spce_Phenomena_Tracker",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
-  "keywords": ["react", "space", "phenomena", "tracker"],
+  "keywords": [
+    "react",
+    "space",
+    "phenomena",
+    "tracker"
+  ],
   "author": "Naeem Amiri",
   "license": "MIT",
   "dependencies": {
@@ -28,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
