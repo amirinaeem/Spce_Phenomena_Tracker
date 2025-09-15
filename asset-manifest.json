@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Spce_Phenomena_Tracker/static/css/main.800f30b3.css",
+    "main.js": "/Spce_Phenomena_Tracker/static/js/main.f104f47e.js",
+    "index.html": "/Spce_Phenomena_Tracker/index.html",
+    "main.800f30b3.css.map": "/Spce_Phenomena_Tracker/static/css/main.800f30b3.css.map",
+    "main.f104f47e.js.map": "/Spce_Phenomena_Tracker/static/js/main.f104f47e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.800f30b3.css",
+    "static/js/main.f104f47e.js"
+  ]
+}
